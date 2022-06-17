@@ -25,7 +25,7 @@ const Footer = () => (
     <div className="sm:w-[90%] w-full h-[0.5px] bg-gray-400 mt-5 " />
 
     <div className="sm:w-[90%] w-full flex justify-between items-center mt-3">
-      <p className="text-xs text-left text-white">Siguenos en redes sociales</p>
+      <p className="text-xs text-left text-white">SIGUENOS EN REDES SOCIALES</p>
       <p className="text-xs text-right text-white">@BitcoinClubMx</p>
     </div>
   </div>
