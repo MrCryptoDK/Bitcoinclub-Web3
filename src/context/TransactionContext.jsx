@@ -46,7 +46,7 @@ export const TransactionsProvider = ({ children }) => {
 
         setTransactions(structuredTransactions);
       } else {
-        console.log("Ethereum is not present");
+        console.log("Wallet is not present");
       }
     } catch (error) {
       console.log(error);
@@ -55,7 +55,7 @@ export const TransactionsProvider = ({ children }) => {
 
   const checkIfWalletIsConnect = async () => {
     try {
-      if (!ethereum) return alert("Please install MetaMask.");
+      if (!ethereum) return alert("Porfavor instala MetaMask!!");
 
       const accounts = await ethereum.request({ method: "eth_accounts" });
 
@@ -82,13 +82,13 @@ export const TransactionsProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
 
-      throw new Error("No ethereum object");
+      throw new Error("No web3 object");
     }
   };
 
   const connectWallet = async () => {
     try {
-      if (!ethereum) return alert("Please install MetaMask.");
+      if (!ethereum) return alert("Porfavor instala MetaMask!!");
 
       const accounts = await ethereum.request({ method: "eth_requestAccounts", });
 
@@ -97,7 +97,7 @@ export const TransactionsProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
 
-      throw new Error("No ethereum object");
+      throw new Error("No web3 object");
     }
   };
 
@@ -131,12 +131,12 @@ export const TransactionsProvider = ({ children }) => {
         setTransactionCount(transactionsCount.toNumber());
         window.location.reload();
       } else {
-        console.log("No ethereum object");
+        console.log("No web3 object");
       }
     } catch (error) {
       console.log(error);
 
-      throw new Error("No ethereum object");
+      throw new Error("No web3 object");
     }
   };
 

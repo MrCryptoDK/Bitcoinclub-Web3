@@ -82,7 +82,7 @@ const Welcome = () => {
         </div>
 
 
-            <a href='https://bitcoinclub.mx/' target='_blank' >
+          <a href='https://bitcoinclub.mx/' target='_blank' >
           <button
               type="button"
               className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
@@ -94,24 +94,13 @@ const Welcome = () => {
           </button>
           </a>
 
-
-
           <button
               type="button"
               className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
               onClick={connectWallet}
             >
                 <p className="text-base font-semibold text-white">
-                    Donar 0.01 ETH
-                </p>
-          </button>
-          <button
-              type="button"
-              className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
-              onClick={connectWallet}
-            >
-                <p className="text-base font-semibold text-white">
-                    Donar 0.01 ETH
+                    Donar 0.01 BNB
                 </p>
           </button>
 

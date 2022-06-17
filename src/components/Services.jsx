@@ -29,7 +29,7 @@ const Services = () => (
             en una sola plataforma
         </h1>
         <p className="w-11/12 my-2 text-base font-light text-left text-white md:w-9/12">
-          BitcoinClub es una plataforma descentralizada sencilla y facil de utilizar ademas somos
+          BitcoinClub es una plataforma descentralizada sencilla y facil de usar ademas somos
           una comunidad que apoya todas las actividades sociales y de caridad
         </p>
       </div>
