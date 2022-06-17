@@ -18,7 +18,7 @@ const App = () => {
     <div className="gradient-bg-welcome">
     <Swap />
     </div>
-    <Donar />
+  
   </div>
   )
 }

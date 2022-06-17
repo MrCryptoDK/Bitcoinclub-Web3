@@ -20,7 +20,7 @@ const TransactionsCard = ({ addressFrom, timestamp, message, keyword, amount, ur
           <a href={`https://rinkeby.etherscan.io/address/${addressFrom}`} target="_blank" rel="noreferrer">
             <p className="text-base text-white">Donador:   {shortenAddress(addressFrom)}</p>
           </a>
-          <p className="text-base text-white">Aporte: {amount} ETH</p>
+          <p className="text-base text-white">Aporte: {amount} BNB</p>
           {message && (
               <p className="text-base text-white">Mensaje: {message}</p>
           )}
