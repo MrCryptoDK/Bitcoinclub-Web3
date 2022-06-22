@@ -14,32 +14,108 @@ body {
 }
 
 .gradient-bg-welcome {
-  background-color:#0f0e13;
-  background-image:
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),
-    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
 
 .gradient-bg-services {
-  background-color:#0f0e13;
-  background-image:
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%),
-    radial-gradient(at 50% 100%, hsla(225,39%,25%,1) 0, transparent 50%);
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
 }
 
 .gradient-bg-transactions {
   background-color: #0f0e13;
-  background-image:
-    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%),
-    radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
 }
 
 .gradient-bg-footer {
   background-color: #0f0e13;
-  background-image:
-    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%),
-    radial-gradient(at 50% 150%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.fila {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botones-loteria {
+  height: 40px;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border-radius: 25px;
+  border: 2px solid orange;
+  margin: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.botones-loteria:hover {
+  background-color: #ee8a27;
+}
+
+.boton-limpiar {
+  height: 40px;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: semibold;
+  font-size: 1.4em;
+  background-color: transparent;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid orange;
+  margin: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.boton-limpiar:hover {
+  background-color: #ee8a27;
+}
+
+.input-loteria {
+  height: 50px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: semibold;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  padding: 11px 20px 11px 11px;
+  margin: 2px solid #888;
+  border: 2px solid orange;
 }
 
 .blue-glassmorphism {
@@ -71,34 +147,59 @@ body {
 
 .white-glassmorphism2 {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 25px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 15px black;
 }
 
 .gradient-bg-navbar {
   background-color: #0f0e13;
-  background-image:
-    radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%),
-    radial-gradient(at 50% 150%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
 
 .eth-card {
-  background-color:hsla(29,85%,54%,1);
-  background-image:
-  radial-gradient(at 30% 8%, hsla(21,65%,62%,1) 0px, transparent 50%),
-  radial-gradient(at 44% 87%, hsla(27,83%,61%,1) 0px, transparent 50%),
-  radial-gradient(at 81% 47%, hsla(340,60%,77%,1) 0px, transparent 50%),
-  radial-gradient(at 43% 62%, hsla(300,76%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 21% 21%, hsla(350,77%,69%,1) 0px, transparent 50%);
+  background-color: hsla(29, 85%, 54%, 1);
+  background-image: radial-gradient(
+      at 30% 8%,
+      hsla(21, 65%, 62%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 44% 87%, hsla(27, 83%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 47%, hsla(340, 60%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 43% 62%, hsla(300, 76%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 21% 21%, hsla(350, 77%, 69%, 1) 0px, transparent 50%);
+  box-shadow: 0 0 15px black;
+}
+
+.dice-card {
+  background-color: hsla(29, 85%, 54%, 1);
+  background-image: radial-gradient(
+      at 30% 8%,
+      hsla(21, 65%, 62%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 44% 87%, hsla(27, 83%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 47%, hsla(340, 60%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 43% 62%, hsla(300, 76%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 21% 21%, hsla(350, 77%, 69%, 1) 0px, transparent 50%);
   box-shadow: 0 0 15px black;
 }
 
 .text-gradient {
   background-color: #fff;
-  background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+  background-image: radial-gradient(
+      at 4% 36%,
+      hsla(0, 0%, 100%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

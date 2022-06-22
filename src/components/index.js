@@ -5,4 +5,7 @@ export { default as Footer } from "./Footer";
 export { default as Services } from "./Services";
 export { default as Transactions } from "./Transactions";
 export { default as Swap } from "./Swap";
+export { default as Swap2 } from "./Swap2";
 export { default as Donar } from "./Donar";
+export { default as Dice } from "./Dice";
+export { default as Botones } from "./Botones";

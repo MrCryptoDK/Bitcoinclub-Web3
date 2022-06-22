@@ -1,5 +1,4 @@
-
-import { Navbar, Welcome, Footer, Services, Transactions, Swap, Donar } from "./components";
+import { Navbar, Welcome, Footer, Services, Transactions, Swap, Swap2, Dice } from "./components";
 import Header from "./components/Header";
 
 const App = () => {
@@ -18,7 +17,12 @@ const App = () => {
     <div className="gradient-bg-welcome">
     <Swap />
     </div>
-  
+    <div className="gradient-bg-welcome">
+    <Swap2 />
+    </div>
+    <div className="gradient-bg-welcome">
+    <Dice />
+    </div>
   </div>
   )
 }
