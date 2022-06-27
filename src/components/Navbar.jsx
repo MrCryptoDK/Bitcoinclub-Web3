@@ -10,7 +10,7 @@ const NavBarItem = ({ title, classprops }) => (
     <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
   );
 
-const NavBar = () => {
+const Navbar = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);
     const { currentAccount, connectWallet } = useContext(TransactionContext);
 
@@ -81,4 +81,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default Navbar;
