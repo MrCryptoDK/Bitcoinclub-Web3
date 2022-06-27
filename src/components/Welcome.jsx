@@ -33,7 +33,7 @@ const Welcome = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full gradient-bg-welcome">
       <div className="flex flex-col items-start justify-between px-4 py-12 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-white sm:text-5xl text-gradient">

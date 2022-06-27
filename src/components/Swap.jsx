@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-
 import { TransactionContext } from "../context/TransactionContext";
 import { Loader } from ".";
 
@@ -16,7 +15,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
-const Welcome = () => {
+const Swap = () => {
   const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -30,7 +29,7 @@ const Welcome = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full gradient-bg-welcome">
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-left text-white sm:text-5xl text-gradient">
@@ -42,7 +41,7 @@ const Welcome = () => {
         <div className="flex flex-col items-center justify-start flex-1 w-full p-5 mt-10 mf:mt-0">
           <div className="flex flex-col items-center justify-start w-full p-5 sm:w-96 white-glassmorphism2">
             <div className="flex flex-col items-start justify-start w-full p-5 sm:w-96 ">
-            <h4 className="text-left text-white" > Intercambio </h4>
+            <h4 className="text-left text-white" > Swap </h4>
             <Input placeholder="Token select" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Cantidad 0.000" name="amount" type="number"  handleChange={handleChange} />
             </div>
@@ -81,31 +80,6 @@ const Welcome = () => {
               )}
         </div>
 
-
-          <a href='https://bitcoinclub.mx/' target='_blank' >
-          <button
-              type="button"
-              className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
-              onClick={connectWallet}
-            >
-                <p className="text-base font-semibold text-white">
-                    BitcoinClub
-                </p>
-          </button>
-          </a>
-
-          <button
-              type="button"
-              className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
-              onClick={connectWallet}
-            >
-                <p className="text-base font-semibold text-white">
-                    Donar 0.01 BNB
-                </p>
-          </button>
-
-
-
             </div>
             </div>
         </div>
@@ -113,4 +87,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Swap;

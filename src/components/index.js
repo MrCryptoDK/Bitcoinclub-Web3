@@ -1,11 +1,12 @@
 export { default as Loader } from "./Loader";
-export { default as Navbar } from "./Navbar";
+export { default as NavBar } from "./NavBar";
+export { default as Header } from "./Header";
 export { default as Welcome } from "./Welcome";
 export { default as Footer } from "./Footer";
 export { default as Services } from "./Services";
 export { default as Transactions } from "./Transactions";
 export { default as Swap } from "./Swap";
-export { default as Swap2 } from "./Swap2";
+export { default as Donaciones } from "./Donaciones";
 export { default as Donar } from "./Donar";
-export { default as Dice } from "./Dice";
+export { default as Loteria } from "./Loteria";
 export { default as Botones } from "./Botones";

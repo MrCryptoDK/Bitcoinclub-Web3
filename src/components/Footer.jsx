@@ -1,20 +1,23 @@
 import React from "react";
-
 import logo from "../../images/logo.png";
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
   <div className="flex flex-col items-center justify-between w-full p-4 md:justify-center gradient-bg-footer">
-    <div className="flex flex-col items-center justify-between w-full my-4 sm:flex-row">
-      <div className="flex flex-[0.5] justify-center items-center">
-        <img src={logo} alt="logo" className="w-48" />
+
+    <div className="flex flex-col items-center justify-center w-full sm:flex-row">
+
+      <div className="header-logo">
+        <img src={logo} alt="bclublogo" />
       </div>
-      <div className="flex flex-wrap items-center flex-1 w-full mt-5 justify-evenly sm:mt-0">
-        <p className="mx-2 text-base text-center text-white cursor-pointer">Enviar</p>
-        <p className="mx-2 text-base text-center text-white cursor-pointer">Exchange</p>
-        <p className="mx-2 text-base text-center text-white cursor-pointer">Loteria</p>
-        <p className="mx-2 text-base text-center text-white cursor-pointer">Donaciones</p>
-        <p className="mx-2 text-base text-center text-white cursor-pointer">Tutoriales</p>
-      </div>
+      <ul className="menu-items" >
+        <li><Link to="/Enviar"> Enviar </Link></li>
+        <li><Link to="/Swap"> Exchange </Link></li>
+        <li><Link to="/Loteria"> Loteria </Link></li>
+        <li><Link to="/Donaciones"> Donaciones </Link></li>
+        <li><Link to="/Tutoriales"> Tutoriales </Link></li>
+      </ul>
+
     </div>
 
     <div className="flex flex-col items-center justify-center mt-5">

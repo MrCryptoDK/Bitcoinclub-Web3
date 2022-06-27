@@ -13,7 +13,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
-const Swap2 = () => {
+const Donaciones = () => {
   const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -27,7 +27,7 @@ const Swap2 = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full gradient-bg-services">
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-left text-white sm:text-5xl text-gradient">
@@ -80,18 +80,7 @@ const Swap2 = () => {
               )}
         </div>
 
-              {/* Boton de donar
-            */}
-
-          <button
-              type="button"
-              className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
-              onClick={connectWallet}
-            >
-                <p className="text-base font-semibold text-white">
-                    Donar 0.1 BNB
-                </p>
-          </button>
+              
 
 
 
@@ -102,4 +91,19 @@ const Swap2 = () => {
   );
 };
 
-export default Swap2;
+export default Donaciones;
+
+
+{/* Boton de donar
+            
+
+            <button
+            type="button"
+            className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
+            onClick={connectWallet}
+          >
+              <p className="text-base font-semibold text-white">
+                  Donar 0.1 BNB
+              </p>
+        </button>
+        */}

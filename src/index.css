@@ -13,6 +13,103 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 50% 150%, hsla(26, 80%, 48%, 1) 0, transparent 60%);
+}
+
+.header-logo img {
+  width: 200px;
+}
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  padding-block: 1.25rem;
+  padding-inline: 3rem;
+  gap: 2.5rem;
+  background-color: transparent;
+}
+
+.menu-items li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 1.7rem;
+}
+
+.menu-items li a:hover {
+  color: orange;
+}
+
+.menu-items li a:focus {
+  color: orange;
+}
+
+.menu-close {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    alingn-items: baseline;
+    z-index: 1000;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    position: fixed;
+    inset: 0 -10% 0 33%;
+    justify-content: start;
+    gap: 3rem;
+    transform: translateX(100%);
+    transition: 500ms;
+  }
+
+  .menu-items.active {
+    transform: translateX(0);
+    transition: 500ms;
+  }
+
+  .menu-close {
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu-close .icon {
+    font-size: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+  }
+
+  .menu-icon .icon {
+    font-size: clamp(3rem, 4vw + 1rem, 4rem);
+  }
+}
+
 .gradient-bg-welcome {
   background-color: #0f0e13;
   background-image: radial-gradient(
@@ -31,7 +128,7 @@ body {
       hsla(253, 16%, 7%, 1) 0,
       transparent 50%
     ),
-    radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+    radial-gradient(at 50% 100%, hsla(26, 70%, 40%, 1) 0, transparent 50%);
 }
 
 .gradient-bg-transactions {
@@ -41,7 +138,7 @@ body {
       hsla(253, 16%, 7%, 1) 0,
       transparent 50%
     ),
-    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+    radial-gradient(at 50% 0%, hsla(26, 70%, 40%, 1) 0, transparent 50%);
 }
 
 .gradient-bg-footer {
@@ -51,11 +148,11 @@ body {
       hsla(253, 16%, 7%, 1) 0,
       transparent 53%
     ),
-    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    radial-gradient(at 50% 150%, hsla(26, 80%, 45%, 1) 0, transparent 50%);
 }
 
 .fila {
-  margin: 4px;
+  margin: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +179,7 @@ body {
   background-color: #ee8a27;
 }
 
-.boton-limpiar {
+.boton-extra {
   height: 40px;
   display: flex;
   flex: 1 1;
@@ -99,21 +196,21 @@ body {
   user-select: none;
 }
 
-.boton-limpiar:hover {
+.boton-extra:hover {
   background-color: #ee8a27;
 }
 
 .input-loteria {
   height: 50px;
-  border-radius: 16px;
-  margin-bottom: 20px;
+  border-radius: 25px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: flex-end;
-  font-weight: semibold;
+  font-weight: bold;
   font-size: 20px;
   background-color: transparent;
   color: white;
-  padding: 11px 20px 11px 11px;
+  padding: 10px 20px 10px 10px;
   margin: 2px solid #888;
   border: 2px solid orange;
 }
@@ -122,16 +219,15 @@ body {
   background: rgb(39, 51, 89, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px white;
 }
 
 .blue-glassmorphism2 {
   background: rgb(39, 51, 89, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
+
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px black;
@@ -139,13 +235,21 @@ body {
 
 .white-glassmorphism {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
+  border-radius: 25px;
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 2px white;
 }
 
 .white-glassmorphism2 {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px black;
+}
+
+.white-menu-glass {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 25px;
   backdrop-filter: blur(5px);

@@ -5,20 +5,60 @@ import { Botones } from ".";
 
 const Input = ({ input }) => (
   <div
-    className="input-loteria w-full white-glassmorphism2">
+    className="w-full input-loteria white-glassmorphism2">
       {input}
   </div>
 );
 
 const BotonLimpiar = (props) => (
-  <div  className="boton-limpiar" onClick={props.manejarLimpiar}>
+  <div  className="boton-extra" onClick={props.manejarLimpiar}>
         {props.children}
   </div>
 );
 
-const Dice = () => {
+const BotonNumerosAle = (props) => (
+  <div  className="boton-extra" onClick={props.manejarNumAle}>
+        {props.children}
+  </div>
+);
+
+
+
+
+const Loteria = () => {
   const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
   const [input, setInput] = useState("");
+
+
+  const generarNumAle = (min, max) => {
+    const numero = Math.floor(Math.random() * (max - min + 1) + min);
+    return numero;
+  }
+
+  const generarNumeros = () => {
+      const numeros = [];
+    while (numeros.length < 6) {
+    const numero = generarNumAle( 1, 49 );
+    if (!numeros.includes(numero)) numeros.push(numero)
+    }
+    return (<p>
+      {
+        numeros.map(num=>(
+        <p key={num}>{ num }</p>
+        ))
+      }
+      </p>);
+  }
+
+  const mostrarNumeros = () => {
+    const numeros = [];
+  while (numeros.length < 6) {
+  const numero = generarNumAle( 1, 49 );
+  if (!numeros.includes(numero)) numeros.push(numero)
+  }
+  return numeros;
+}
+
 
   const agregarInput = numero => {
     setInput(input + numero);
@@ -35,7 +75,7 @@ const Dice = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full gradient-bg-transactions">
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-left text-white sm:text-5xl text-gradient">
@@ -53,14 +93,18 @@ const Dice = () => {
         <div className="flex flex-col items-center justify-start flex-1 w-full p-5 mt-10 mf:mt-0">
           <div className="flex flex-col items-center justify-start w-full p-5 sm:w-96 white-glassmorphism2">
             <div className="flex flex-col items-start justify-start w-full p-5 sm:w-96 ">
-            <h4 className="text-center text-white" > Elige tus 6 numeros favoritos </h4>
+            <h1 className="text-white " > Elige tus 6 numeros favoritos </h1>
+            <p className="text-white " > Numeros recomendados: <br /> 
+            {generarNumAle(1, 49)} {generarNumAle(1, 49)} {generarNumAle(1, 49)} {generarNumAle(1, 49)} {generarNumAle(1, 49)} {generarNumAle(1, 49)}
+            </p>
             </div>
 
             <Input input={input}/>
             {/* Linea de division
             */}
             <div className="h-[1px] w-full bg-gray-400 my-2" />
-            <div className="fila w-full">
+
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 01 </Botones>
             <Botones manejarClic={agregarInput}> 02 </Botones>
             <Botones manejarClic={agregarInput}> 03 </Botones>
@@ -69,7 +113,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 06 </Botones>
             <Botones manejarClic={agregarInput}> 07 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 08 </Botones>
             <Botones manejarClic={agregarInput}> 09 </Botones>
             <Botones manejarClic={agregarInput}> 10 </Botones>
@@ -78,7 +122,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 13 </Botones>
             <Botones manejarClic={agregarInput}> 14 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 15 </Botones>
             <Botones manejarClic={agregarInput}> 16 </Botones>
             <Botones manejarClic={agregarInput}> 17 </Botones>
@@ -87,7 +131,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 20 </Botones>
             <Botones manejarClic={agregarInput}> 21 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 22 </Botones>
             <Botones manejarClic={agregarInput}> 23 </Botones>
             <Botones manejarClic={agregarInput}> 24 </Botones>
@@ -96,7 +140,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 27 </Botones>
             <Botones manejarClic={agregarInput}> 28 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 29 </Botones>
             <Botones manejarClic={agregarInput}> 30 </Botones>
             <Botones manejarClic={agregarInput}> 31 </Botones>
@@ -105,7 +149,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 34 </Botones>
             <Botones manejarClic={agregarInput}> 35 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 36 </Botones>
             <Botones manejarClic={agregarInput}> 37 </Botones>
             <Botones manejarClic={agregarInput}> 38 </Botones>
@@ -114,7 +158,7 @@ const Dice = () => {
             <Botones manejarClic={agregarInput}> 41 </Botones>
             <Botones manejarClic={agregarInput}> 42 </Botones>
             </div>
-            <div className="fila w-full">
+            <div className="w-full fila">
             <Botones manejarClic={agregarInput}> 43 </Botones>
             <Botones manejarClic={agregarInput}> 44 </Botones>
             <Botones manejarClic={agregarInput}> 45 </Botones>
@@ -125,11 +169,14 @@ const Dice = () => {
             </div>
 
 
-            <div className="fila w-full">
-            <BotonLimpiar manejarLimpiar={ () => setInput("")}>
+            <div className="w-full fila">
+            <BotonLimpiar manejarLimpiar={() => setInput("")}>
             Limpiar
             </BotonLimpiar>
-            <BotonLimpiar> Aleatorio </BotonLimpiar>
+
+            <BotonNumerosAle manejarNumAle={() => setInput( mostrarNumeros )}>
+            Aleatorio
+            </BotonNumerosAle>
             </div>
 
 
@@ -179,4 +226,4 @@ const Dice = () => {
   );
 };
 
-export default Dice;
+export default Loteria;
