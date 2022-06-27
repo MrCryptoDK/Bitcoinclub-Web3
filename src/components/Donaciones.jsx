@@ -31,9 +31,9 @@ const Donaciones = () => {
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-left text-white sm:text-5xl text-gradient">
-            Recibimos donaciones para<br />las actividades de caridad
+            Recibimos donaciones para las<br />actividades sociales y de caridad
           </h1>
-          <p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">
+          <p className="mt-5 text-base font-light text-left text-white md:w-9/12">
             El 80% de las donaciones sera para las actividades de caridad. <br />
             El 20% restante sera para aumentar el valor del token BCLUB. <br />
             <br />
@@ -78,16 +78,28 @@ const Donaciones = () => {
                   Donar
                 </button>
               )}
-        </div>
-
               
-
-
-
-            </div>
-            </div>
         </div>
+        
+            </div>
+
+            <div className= "inline-grid grid-cols-3 p-4 gap-4">
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/C-3aYnhF6Io"> </iframe>
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/FmtyY2hmg04"> </iframe>
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/Yn8WGaO__ak"> </iframe>
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/N9vPxoWgfQc"> </iframe>
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/kPUfx-i5k_E"> </iframe>
+            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/D90jmWX76PY"> </iframe>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
       </div>
+      
   );
 };
 

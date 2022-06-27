@@ -44,12 +44,13 @@ const Loteria = () => {
     return (<p>
       {
         numeros.map(num=>(
-        <p key={num}>{ num }</p>
+        <p key={num}> {num} </p>
         ))
       }
       </p>);
   }
 
+  //guarda numeros que no se repiten en un array
   const mostrarNumeros = () => {
     const numeros = [];
   while (numeros.length < 6) {
@@ -78,7 +79,7 @@ const Loteria = () => {
     <div className="flex items-center justify-center w-full gradient-bg-transactions">
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
-          <h1 className="py-1 text-3xl text-left text-white sm:text-5xl text-gradient">
+          <h1 className="py-1 text-3xl text-center text-white sm:text-5xl text-gradient">
             Loteria totalmente Descentralizada<br />segura, confiable y transparente
           </h1>
           <p className="w-11/12 mt-5 text-base font-light text-left text-white md:w-9/12">

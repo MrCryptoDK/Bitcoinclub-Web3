@@ -71,6 +71,10 @@ body {
     z-index: 1000;
   }
 
+  .button-web3 {
+    display: none;
+  }
+
   .menu-items {
     flex-direction: column;
     position: fixed;

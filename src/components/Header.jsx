@@ -43,9 +43,9 @@ const Header = () => {
 
       {!currentAccount && (
         <button
-          type="button"
+          type="button-web3"
           onClick={connectWallet}
-          className="border-[2px] p-2 border-[#ee8a27] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#ee8a27]"
+          className="button-web3 border-[2px] p-2 border-[#ee8a27] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#ee8a27]"
           >
           <p className="text-base font-semibold text-white">
           Conectar Billetera
@@ -55,8 +55,8 @@ const Header = () => {
 
       {currentAccount && (
         <button
-        type="button"
-        className="border-[2px] p-2 border-[#ee8a27] py-2 px-7 mx-4 rounded-full cursor-pointer bg-[#ee8a27]"
+        type="button-web3"
+        className="button-web3 border-[2px] p-2 border-[#ee8a27] py-2 px-7 mx-4 rounded-full cursor-pointer bg-[#ee8a27]"
         >
         <p className="text-base font-semibold text-white">
           {shortenAddress(currentAccount)}
