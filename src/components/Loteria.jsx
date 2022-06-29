@@ -169,7 +169,7 @@ const Loteria = () => {
             Limpiar
             </BotonLimpiar>
 
-            <BotonNumerosAle manejarNumAle={() => setInput( generarNumeros )}>
+            <BotonNumerosAle manejarNumAle={() => setInput( mostrarNumeros )}>
             Aleatorio
             </BotonNumerosAle>
             </div>
