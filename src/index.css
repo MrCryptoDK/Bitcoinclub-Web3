@@ -13,6 +13,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(black, #ee8a27, black);
+  border-radius: 25px;
+}
+
 .header {
   width: 100%;
   position: fixed;

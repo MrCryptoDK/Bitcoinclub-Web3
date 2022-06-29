@@ -6,6 +6,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
     type={type}
+    min="0.01"
     step="0.01"
     value={value}
     onChange={(e) => handleChange(e, name)}

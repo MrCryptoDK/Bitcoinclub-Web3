@@ -6,7 +6,7 @@ import { Botones } from ".";
 const Input = ({ input }) => (
   <div
     className="w-full input-loteria white-glassmorphism2">
-      {input}
+    {input}
   </div>
 );
 
@@ -36,18 +36,12 @@ const Loteria = () => {
   }
 
   const generarNumeros = () => {
-      const numeros = [];
+    const numeros = {num1, num2, num3, num4, num5, num6};
     while (numeros.length < 6) {
     const numero = generarNumAle( 1, 49 );
     if (!numeros.includes(numero)) numeros.push(numero)
     }
-    return (<p>
-      {
-        numeros.map(num=>(
-        <p key={num}> {num} </p>
-        ))
-      }
-      </p>);
+    return { num1, num2, num3, num4, num5, num6};
   }
 
   //guarda numeros que no se repiten en un array
@@ -175,7 +169,7 @@ const Loteria = () => {
             Limpiar
             </BotonLimpiar>
 
-            <BotonNumerosAle manejarNumAle={() => setInput( mostrarNumeros )}>
+            <BotonNumerosAle manejarNumAle={() => setInput( generarNumeros )}>
             Aleatorio
             </BotonNumerosAle>
             </div>
