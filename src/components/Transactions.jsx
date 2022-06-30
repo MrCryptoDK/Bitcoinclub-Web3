@@ -37,7 +37,9 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
           className="object-cover w-full h-64 rounded-md shadow-lg 2xl:h-96"
         />
         <div className="blue-glassmorphism border-[2px] border-[#ee8a27] hover:bg-[#ee8a27] p-3 px-5 cursor-pointer w-max rounded-3xl -mt-5 shadow-2xl">
-          <p className="font-bold text-white">{timestamp}</p>
+          <p className="font-bold text-white">
+            {timestamp}
+            </p>
         </div>
       </div>
     </div>

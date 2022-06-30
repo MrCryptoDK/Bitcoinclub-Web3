@@ -6,7 +6,7 @@ import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { GrMoney } from "react-icons/gr";
 
 const ServiceCard = ({ color, title, icon, subtitle }) => (
-  <div className="flex flex-row items-start justify-start p-3 m-2 cursor-pointer white-glassmorphism2 hover:shadow-2xl ">
+  <div className="flex flex-row items-start justify-start p-3 m-2 white-glassmorphism2 hover:shadow-2xl ">
     <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
       {icon}
     </div>
