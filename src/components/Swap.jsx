@@ -79,7 +79,7 @@ const Swap = () => {
                 </button>
               )}
         </div>
-        
+        <Tenzies />
 
             </div>
             </div>

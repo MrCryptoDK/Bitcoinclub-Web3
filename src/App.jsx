@@ -1,4 +1,4 @@
-import { Header, Navbar, Enviar, Footer, Services, Transactions, Swap, Donaciones, Form, Loteria, Tutoriales } from "./components";
+import { Header, Navbar, Enviar, Footer, Swap, Donaciones, Loteria, Tutoriales } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {

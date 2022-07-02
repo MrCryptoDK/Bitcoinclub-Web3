@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 import { Loader } from ".";
 import { Botones } from ".";
+import Tenzies from "./Tenzies";
 
 const Input = ({ input }) => (
   <div
@@ -51,11 +52,8 @@ const Loteria = () => {
 
   const handleSubmit = (e) => {
     const { amount } = formData;
-
     e.preventDefault();
-
     if (!amount) return;
-
     sendTransaction();
   };
 
