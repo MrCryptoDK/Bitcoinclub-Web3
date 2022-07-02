@@ -35,15 +35,6 @@ const Loteria = () => {
     return numero;
   }
 
-  const generarNumeros = () => {
-    const numeros = {num1, num2, num3, num4, num5, num6};
-    while (numeros.length < 6) {
-    const numero = generarNumAle( 1, 49 );
-    if (!numeros.includes(numero)) numeros.push(numero)
-    }
-    return { num1, num2, num3, num4, num5, num6};
-  }
-
   //guarda numeros que no se repiten en un array
   const mostrarNumeros = () => {
     const numeros = [];
@@ -53,7 +44,6 @@ const Loteria = () => {
   }
   return numeros;
 }
-
 
   const agregarInput = numero => {
     setInput(input + numero);

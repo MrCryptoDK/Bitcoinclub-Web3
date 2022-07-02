@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { SiBinance } from "react-icons/si";
 import { RiSettings3Fill } from "react-icons/ri";
-
+import { Services, Transactions } from ".";
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
@@ -19,7 +19,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
-const Welcome = () => {
+const Enviar = () => {
   const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -33,6 +33,7 @@ const Welcome = () => {
   };
 
   return (
+    <>
     <div className="flex items-center justify-center w-full gradient-bg-welcome">
       <div className="flex flex-col items-start justify-between px-4 py-12 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
@@ -135,7 +136,13 @@ const Welcome = () => {
             </div>
         </div>
       </div>
+
+<Services />
+<Transactions />
+</>
+
+
   );
 };
 
-export default Welcome;
+export default Enviar;

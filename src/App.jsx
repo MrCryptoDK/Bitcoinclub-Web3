@@ -1,4 +1,4 @@
-import { Header, Navbar, Welcome, Footer, Services, Transactions, Swap, Donaciones, Loteria, Tutoriales } from "./components";
+import { Header, Navbar, Enviar, Footer, Services, Transactions, Swap, Donaciones, Form, Loteria, Tutoriales } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -10,16 +10,13 @@ const App = () => {
       </div>
 
       <Routes>
-        <Route path="/"  element={<Welcome />} />
-        <Route path="/Enviar"  element={<Welcome />} />
+        <Route path="/"  element={<Enviar />} />
+        <Route path="/Enviar"  element={<Enviar />} />
         <Route path="/Swap"  element={<Swap />} />
         <Route path="/Loteria"  element={<Loteria />} />
         <Route path="/Donaciones"  element={<Donaciones />} />
         <Route path="/Tutoriales"  element={<Tutoriales />} />
       </Routes>
-
-      <Services />
-      <Transactions />
       <div>
       <Footer />
       </div>

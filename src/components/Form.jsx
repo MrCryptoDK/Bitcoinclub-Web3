@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 import { Loader } from ".";
-import { Transactions } from ".";
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
@@ -15,7 +14,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
-const Donaciones = () => {
+const Form = () => {
   const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -29,7 +28,6 @@ const Donaciones = () => {
   };
 
   return (
-    <>
     <div className="flex items-center justify-center w-full gradient-bg-services">
       <div className="flex flex-col items-start justify-between py-10 px-7 mf:flex-row md:p-20">
         <div className="flex flex-col justify-start flex-1 mf:mr-10">
@@ -80,47 +78,19 @@ const Donaciones = () => {
                 >
                   Donar
                 </button>
-                
               )}
+              
         </div>
-
+        
             </div>
-
-            <div className= "w-full inline-grid grid-cols-3 gap-4 p-4">
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1490481920145-fc78891bbb99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            <img className="w-full aspect-video rounded-xl" src="https://images.unsplash.com/photo-1588666070825-14c79d5eb0c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
-            </div>
-
-
-
+            
           </div>
 
         </div>
 
       </div>
-    <Transactions />
-    </>
-
+      
   );
 };
 
-export default Donaciones;
-
-
-{/* Boton de donar
-            
-
-            <button
-            type="button"
-            className="border-[2px] border-[#ee8a27] flex flex-row justify-center items-center my-5 p-2 rounded-full cursor-pointer hover:bg-[#ee8a27]"
-            onClick={connectWallet}
-          >
-              <p className="text-base font-semibold text-white">
-                  Donar 0.1 BNB
-              </p>
-        </button>
-        */}
+export default Form;
