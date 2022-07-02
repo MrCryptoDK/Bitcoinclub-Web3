@@ -12,3 +12,4 @@ export { default as Donar } from "./Donar";
 export { default as Loteria } from "./Loteria";
 export { default as Botones } from "./Botones";
 export { default as Tutoriales } from "./Tutoriales";
+export { default as Tenzies } from "./Tenzies";
