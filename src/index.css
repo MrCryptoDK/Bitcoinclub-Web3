@@ -27,8 +27,8 @@ ul2 li {
 
 ul2 li a {
   position: relative;
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
   display: inline-block;
   border-radius: 20px;
   display: flex;
@@ -184,6 +184,11 @@ ul2 li a:hover::before {
   ul2 {
     margin-top: 250px;
     flex-direction: column;
+  }
+
+  ul2 li a {
+    width: 55px;
+    height: 55px;
   }
 
   ul2 li a:hover {
