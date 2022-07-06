@@ -13,6 +13,60 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul2 {
+  position: fixed;
+  display: flex;
+  z-index: 2;
+}
+
+ul2 li {
+  position: relative;
+  list-style: none;
+  margin: 5px;
+}
+
+ul2 li a {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  alingn-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  border: 2px solid rgba(238, 138, 39, 0.5);
+  border-right: 2px solid rgba(238, 138, 39, 0.4);
+  border-bottom: 2px solid rgba(238, 138, 39, 0.4);
+  box-shadow: 0 0 5px black;
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+ul2 li a:hover {
+  transform: translateY(-20px);
+  color: #ee8a27;
+}
+
+ul2 li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.8s;
+}
+
+ul2 li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+
 ::-webkit-scrollbar {
   width: 0.5vw;
   height: 0.5vw;
@@ -23,7 +77,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(black, #ee8a27, black);
+  background-image: linear-gradient(black, black, #ee8a27, black, black);
   border-radius: 25px;
 }
 
@@ -64,11 +118,11 @@ body {
 }
 
 .menu-items li a:hover {
-  color: orange;
+  color: #ee8a27;
 }
 
 .menu-items li a:focus {
-  color: orange;
+  color: #ee8a27;
 }
 
 .menu-close {
@@ -125,6 +179,16 @@ body {
 
   .menu-icon .icon {
     font-size: clamp(3rem, 4vw + 1rem, 4rem);
+  }
+
+  ul2 {
+    margin-top: 250px;
+    flex-direction: column;
+  }
+
+  ul2 li a:hover {
+    transform: translateX(-20px);
+    color: #ee8a27;
   }
 }
 
@@ -190,7 +254,7 @@ body {
   background-color: transparent;
   color: white;
   border-radius: 25px;
-  border: 2px solid orange;
+  border: 2px solid #ee8a27;
   margin: 4px;
   cursor: pointer;
   user-select: none;
@@ -211,7 +275,7 @@ body {
   background-color: transparent;
   color: white;
   border-radius: 50px;
-  border: 2px solid orange;
+  border: 2px solid #ee8a27;
   margin: 5px;
   cursor: pointer;
   user-select: none;
@@ -233,7 +297,7 @@ body {
   color: white;
   padding: 10px 20px 10px 10px;
   margin: 2px solid #888;
-  border: 2px solid orange;
+  border: 2px solid #ee8a27;
 }
 
 .blue-glassmorphism {
