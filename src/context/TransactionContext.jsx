@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import { contractABI, contractAddress } from "../utils/constants";
+import { transactionsABI, transactionsAddress } from "../utils/constants";
 
 export const TransactionContext = React.createContext();
 const { ethereum } = window;
 
-const createEthereumContract = () => {
+const createContract = () => {
   const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
-  const transactionsContract = new ethers.Contract(contractAddress, contractABI, signer);
+  const transactionsContract = new ethers.Contract(transactionsAddress, transactionsABI, signer);
   return transactionsContract;
 };
 
@@ -26,9 +26,8 @@ export const TransactionsProvider = ({ children }) => {
   const getAllTransactions = async () => {
     try {
       if (ethereum) {
-        const transactionsContract = createEthereumContract();
+        const transactionsContract = createContract();
         const availableTransactions = await transactionsContract.getAllTransactions();
-
         const structuredTransactions = availableTransactions.map((transaction) => ({
           addressTo: transaction.receiver,
           addressFrom: transaction.sender,
@@ -37,9 +36,7 @@ export const TransactionsProvider = ({ children }) => {
           keyword: transaction.keyword,
           amount: parseInt(transaction.amount._hex) / (10 ** 18)
         }));
-
         console.log(structuredTransactions);
-
         setTransactions(structuredTransactions);
       } else {
         console.log("Wallet is not present");
@@ -52,17 +49,15 @@ export const TransactionsProvider = ({ children }) => {
   const checkIfWalletIsConnect = async () => {
     try {
       if (!ethereum) return alert("Porfavor instala MetaMask!!");
-
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-
+        const accounts = await ethereum.request({ method: "eth_accounts" });
       if (accounts.length) {
         setCurrentAccount(accounts[0]);
-
         getAllTransactions();
       } else {
         console.log("No accounts found");
       }
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
     }
   };
@@ -70,14 +65,12 @@ export const TransactionsProvider = ({ children }) => {
   const checkIfTransactionsExists = async () => {
     try {
       if (ethereum) {
-        const transactionsContract = createEthereumContract();
+        const transactionsContract = createContract();
         const currentTransactionCount = await transactionsContract.getTransactionCount();
-
         window.localStorage.setItem("transactionCount", currentTransactionCount);
       }
     } catch (error) {
       console.log(error);
-
       throw new Error("No web3 object");
     }
   };
@@ -85,14 +78,12 @@ export const TransactionsProvider = ({ children }) => {
   const connectWallet = async () => {
     try {
       if (!ethereum) return alert("Porfavor instala MetaMask!!");
-
       const accounts = await ethereum.request({ method: "eth_requestAccounts", });
-
       setCurrentAccount(accounts[0]);
       window.location.reload();
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
-
       throw new Error("No web3 object");
     }
   };
@@ -101,7 +92,7 @@ export const TransactionsProvider = ({ children }) => {
     try {
       if (ethereum) {
         const { addressTo, amount, keyword, message } = formData;
-        const transactionsContract = createEthereumContract();
+        const transactionsContract = createContract();
         const parsedAmount = ethers.utils.parseEther(amount);
 
         await ethereum.request({
@@ -117,13 +108,12 @@ export const TransactionsProvider = ({ children }) => {
         const transactionHash = await transactionsContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
 
         setIsLoading(true);
-        console.log(`Loading - ${transactionHash.hash}`);
+        console.log(`Minando... ${transactionHash.hash}`);
         await transactionHash.wait();
-        console.log(`Success - ${transactionHash.hash}`);
+        console.log(`Listo... ${transactionHash.hash}`);
         setIsLoading(false);
 
         const transactionsCount = await transactionsContract.getTransactionCount();
-
         setTransactionCount(transactionsCount.toNumber());
         window.location.reload();
       } else {

@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "Transactions",
-  "sourceName": "contracts/Transactions.sol",
-  "abi2": [
+  "contractName": "Transacciones",
+  "sourceName": "contracts/Transacciones.sol",
+  "abi": [
     {
       "anonymous": false,
       "inputs": [

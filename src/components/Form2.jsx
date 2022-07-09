@@ -1,6 +1,27 @@
 import React from 'react'
+import Web3Modal from "web3modal";
+import { ethers } from "ethers";
+
+const providerOptions = {
+}
 
 const Form2 = () => {
+
+  async function connectWallet() {
+    try {
+      const web3Modal = new Web3Modal( {
+        cacheprovider: false,
+        providerOptions,
+      });
+      const web3ModalInstance = await web3Modal.connect();
+      const web3ModalProvider = new ethers.providers.Web3Provider(web3ModalInstance);
+      console.log(web3ModalProvider);
+    }
+    catch(error) {
+      console.error(error);
+    }
+  }
+
   return (
     <>
     <div>
@@ -16,6 +37,11 @@ const Form2 = () => {
           </button>
           </section>
 
+          <h1 className="p-5 text-white">Web3Modal connection!</h1>
+          <button onClick={connectWallet} className="mt-5 p-3 text-white  border-[#ee8a27]  border-[2px] hover:bg-[#ee8a27] rounded-full">
+            Connect Wallet
+          </button>
+
           <section className="p-5 text-white">
           <p> Admin: 
           Seleccionar ganador</p>
@@ -29,7 +55,7 @@ const Form2 = () => {
               <div className="card-content">
                 <div className="content ">
                   <h2> Loteria Historial</h2>
-                  <div classNmae="history-entry ">
+                  <div className="history-entry ">
                     <div> Ganador del Sorteo #1: </div>
                     <a className="text-orange-400" href="https://etherscan.io/address/0x1a084BefCA97BBF70F6B5116130563577a4b7F61" target="_blank">
                       0x1a084BefCA97BBF70F6B5116130563577a4b7F61</a>

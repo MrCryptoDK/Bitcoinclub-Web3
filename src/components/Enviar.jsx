@@ -6,7 +6,7 @@ import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
-const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
+const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[1px] border-gray-400 text-sm font-light text-white";
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
@@ -36,7 +36,7 @@ const Enviar = () => {
     <>
     <div className="flex items-center justify-center w-full gradient-bg-welcome">
       <div className="flex flex-col items-start justify-between px-4 py-12 mf:flex-row md:p-20">
-        <div className="flex flex-col justify-start flex-1 mf:mr-10">
+        <div className="flex flex-col justify-center flex-1 mf:mr-10">
           <h1 className="py-1 text-3xl text-white sm:text-5xl text-gradient">
             Envia Crypto <br /> a todo el mundo
           </h1>
@@ -57,7 +57,6 @@ const Enviar = () => {
 
           {/* Grid info
         */}
-
           <div className="grid w-full grid-cols-2 mt-10 sm:grid-cols-3">
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Confiabiliad
@@ -98,7 +97,7 @@ const Enviar = () => {
               )}
               {!currentAccount && (
               <p className="text-sm font-semibold text-white">
-                  Dirección: 0x{shortenAddress(currentAccount)}
+                  Dirección: {shortenAddress(currentAccount)}
                   </p>
               )}
                 <p className="mt-1 text-lg font-semibold text-white">

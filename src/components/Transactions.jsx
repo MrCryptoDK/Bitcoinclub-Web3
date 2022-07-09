@@ -15,8 +15,8 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
       min-w-full
       flex-col p-3 rounded-md hover:shadow-2xl"
     >
-      <div className="flex flex-col items-center w-full mt-3">
-        <div className="justify-start w-full p-5 mb-6 display-flex">
+      <div className="flex flex-col items-center w-full mt-2">
+        <div className="justify-center w-full p-3 mb-3 display-flex">
          <a href={`https://rinkeby.etherscan.io//address/${addressFrom}`} target="_blank" rel="noreferrer">
             <p className="text-base text-white">Desde:   {shortenAddress(addressFrom)}</p>
           </a>
@@ -36,7 +36,7 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
           alt="Gif"
           className="object-cover w-full h-64 rounded-md shadow-lg 2xl:h-96"
         />
-        <div className="blue-glassmorphism border-[2px] border-[#ee8a27] hover:bg-[#ee8a27] p-3 px-5 cursor-pointer w-max rounded-3xl -mt-5 shadow-2xl">
+        <div className="blue-glassmorphism border-[2px] border-[#ee8a27] hover:bg-[#ee8a27] p-3 px-5 cursor-pointer select-none w-max rounded-3xl -mt-5">
           <p className="font-bold text-white">
             {timestamp}
             </p>
@@ -58,7 +58,7 @@ const Transactions = () => {
           </h3>
         ) : (
           <h3 className="my-2 text-3xl text-center text-white">
-            Conecta tu cuenta para ver las ultimas transacciones!
+            Conecta tu cuenta para ver tus ultimas transacciones!
           </h3>
         )}
 
