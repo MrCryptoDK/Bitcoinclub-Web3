@@ -16,6 +16,8 @@ body {
 .redes-sociales {
   position: fixed;
   display: flex;
+  margin-right: 20px;
+  margin-top: 120px;
   z-index: 2;
 }
 
@@ -105,7 +107,7 @@ body {
   user-select: none;
   padding-block: 1.25rem;
   padding-inline: 3rem;
-  gap: 2.5rem;
+  gap: 2rem;
   background-color: transparent;
 }
 
@@ -113,7 +115,7 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  padding-bottom: 1.7rem;
+  padding-bottom: 2rem;
 }
 
 .menu-items li a:hover {
@@ -181,7 +183,8 @@ body {
   }
 
   .redes-sociales {
-    margin-top: 250px;
+    margin-top: 400px;
+    margin-right: 20px;
     flex-direction: column;
   }
 

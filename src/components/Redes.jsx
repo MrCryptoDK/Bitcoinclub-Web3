@@ -17,7 +17,7 @@ const Redes = () => (
 
     <div className="flex items-center justify-end w-full sm:flex-row ">
 
-      <div className="mr-5 -mb-28 redes-sociales" >
+      <div className="redes-sociales" >
         <li> <a href="https://www.facebook.com/BitcoinClubApp" target="_blank" className="shadow-md shadow-orange-500/50">
           <IconoRedSocial icon={<FaFacebookF fontSize={35}/>} />
         </a></li>

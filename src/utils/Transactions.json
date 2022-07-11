@@ -2,7 +2,7 @@
   "_format": "hh-sol-artifact-1",
   "contractName": "Transactions",
   "sourceName": "contracts/Transactions.sol",
-  "abi2": [
+  "abiing": [
     {
       "anonymous": false,
       "inputs": [

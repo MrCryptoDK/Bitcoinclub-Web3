@@ -17,10 +17,10 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
     >
       <div className="flex flex-col items-center w-full mt-2">
         <div className="justify-center w-full p-3 mb-3 display-flex">
-         <a href={`https://rinkeby.etherscan.io//address/${addressFrom}`} target="_blank" rel="noreferrer">
+         <a href={`https://testnet.bscscan.com/address/${addressFrom}`} target="_blank" rel="noreferrer">
             <p className="text-base text-white">Desde:   {shortenAddress(addressFrom)}</p>
           </a>
-          <a href={`https://rinkeby.etherscan.io//address/${addressTo}`} target="_blank" rel="noreferrer">
+          <a href={`https://testnet.bscscan.com/address/${addressTo}`} target="_blank" rel="noreferrer">
             <p className="text-base text-white">Para:   {shortenAddress(addressTo)}</p>
           </a>
           <br />
