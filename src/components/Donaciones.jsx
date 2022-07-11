@@ -31,8 +31,8 @@ const Donaciones = () => {
           Recibimos donaciones para las<br />actividades sociales y de caridad
           </h1>
           <p className="mt-5 font-light text-center text-white">
-            El 80% de las donaciones sera para las actividades de caridad. <br />
-            El 20% restante sera para aumentar el valor del token BCLUB. <br />
+            El 80% de las donaciones sera para las actividades sociales y de caridad. <br />
+            El 20% restante sera para aumentar y crecer el valor del token BCLUB. <br />
           </p>
 
         <div className="flex flex-col items-center justify-start flex-1 w-full p-5 mt-5 mf:mt-0">
@@ -74,7 +74,8 @@ const Donaciones = () => {
         </div>
 
         <p className="mt-3 mb-5 font-light text-center text-white">
-            Tambien puedes enviar cualquier cripto a esta direccion: <br />
+            Tambien puedes enviar cualquier otra criptomoneda 
+            a nuestra Dirección oficial: <br />
             0x71652091BFA1eE1113ca8F653f102e03a73Df298
           </p>
 
