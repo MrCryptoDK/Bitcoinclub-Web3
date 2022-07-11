@@ -97,7 +97,7 @@ const Enviar = () => {
               )}
               {!currentAccount && (
               <p className="text-sm font-semibold text-white">
-                  Dirección: {shortenAddress(currentAccount)}
+                  Dirección: 0x{shortenAddress(currentAccount)}
                   </p>
               )}
                 <p className="mt-1 text-lg font-semibold text-white">

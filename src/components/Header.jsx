@@ -1,10 +1,30 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../images/logo.png";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
+
+
+const useClickOutside = (manejador) => {
+  const menuRef = useRef()
+
+  useEffect(() => {
+    const clicAfuera = (evento) => {
+      if (!menuRef.current.contains(evento.target)) {
+        manejador()
+      }
+    }
+        document.addEventListener("mousedown", clicAfuera)
+        document.addEventListener("touchstart", clicAfuera)
+    return () => {
+        document.removeEventListener("mousedown", clicAfuera)
+        document.removeEventListener("touchstart", clicAfuera)
+  }
+})
+  return menuRef
+}
 
 const Header = () => {
   const { currentAccount, connectWallet } = useContext(TransactionContext);
@@ -13,6 +33,10 @@ const Header = () => {
   const verMenu = () => {
     setOpen(!open)
   }
+
+  const menuRef = useClickOutside(() => {
+    setOpen(false)
+  })
 
   return (
     <div className="header">
@@ -26,7 +50,7 @@ const Header = () => {
        </div>
 
        <nav>
-         <ul className={open ? "menu-items white-menu-glass active" : "menu-items white-menu-glass"}>
+         <ul ref={menuRef} className={open ? "menu-items white-menu-glass active" : "menu-items white-menu-glass"}>
 
            <div className="menu-close">
            <AiOutlineClose className="icon" onClick={verMenu}/>
