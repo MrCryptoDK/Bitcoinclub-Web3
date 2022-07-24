@@ -9,7 +9,7 @@ export { default as Transactions } from "./Transactions";
 export { default as Swap } from "./Swap";
 export { default as Donaciones } from "./Donaciones";
 export { default as Form } from "./Form";
-export { default as Form2 } from "./Form2";
+export { default as Sorteos } from "./Sorteos";
 export { default as Donar } from "./Donar";
 export { default as Loteria } from "./Loteria";
 export { default as Botones } from "./Botones";

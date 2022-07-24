@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import { ingtransactionsABI, ingtransactionsAddress, bnbingtransactionsABI, bnbingtransactionsAddress } from "../utils/constants";
+import { bnbingtransactionsABI, bnbingtransactionsAddress } from "../utils/constants";
 
 export const TransactionContext = React.createContext();
 const { ethereum } = window;

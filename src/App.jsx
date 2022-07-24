@@ -1,4 +1,4 @@
-import { Header, Navbar, Enviar, Form, Form2, Footer, Redes, Swap, Donaciones, Loteria, Tutoriales } from "./components";
+import { Header, Navbar, Enviar, Form, Sorteos, Footer, Redes, Swap, Donaciones, Loteria, Tutoriales } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/"  element={<Enviar />} />
         <Route path="/Enviar"  element={<Enviar />} />
         <Route path="/Swap"  element={<Swap />} />
-        <Route path="/Loteria"  element={<Loteria />} />
+        <Route path="/Loteria"  element={<Sorteos />} />
         <Route path="/Donaciones"  element={<Donaciones />} />
         <Route path="/Tutoriales"  element={<Tutoriales />} />
       </Routes>

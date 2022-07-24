@@ -24,11 +24,8 @@ const Enviar = () => {
 
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
-
     e.preventDefault();
-
     if (!addressTo || !amount || !keyword || !message) return;
-
     sendTransaction();
   };
 
@@ -110,12 +107,12 @@ const Enviar = () => {
           {/* Parte del Tranferir
         */}
 
-          <div className="flex flex-col items-center justify-start w-full p-5 sm:w-96 blue-glassmorphism2">
+          <div className="flex flex-col items-center justify-start w-full p-5 sm:w-96 white-glassmorphism2">
             <Input placeholder="Direccion de Envio" name="addressTo" type="text" handleChange={handleChange} />
             <Input placeholder="Cantidad 0.0 (BNB)" name="amount" type="number" handleChange={handleChange} />
             <Input placeholder="Palabra Clave (Gif)" name="keyword" type="text" handleChange={handleChange} />
             <Input placeholder="Mensaje Personal" name="message" type="text"  handleChange={handleChange} />
-            <div className="h-[1px] w-full bg-gray-400 my-2" />
+            <div className="h-[1px] w-full bg-[#ee8a27] my-2" />
 
              {/* Circulo de cargando
             */}
@@ -126,7 +123,7 @@ const Enviar = () => {
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className="text-white w-full mt-2 border-[1px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer"
+                  className="text-white w-full mt-2 border-[2px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer"
                 >
                   Enviar
                 </button>

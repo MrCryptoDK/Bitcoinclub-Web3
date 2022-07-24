@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { TransactionContext } from "../context/TransactionContext";
 import { Loader, Tenzies } from ".";
 
-const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
-
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
@@ -51,15 +49,9 @@ const Swap = () => {
             </div>
 
             {!currentAccount && (
-            <button
-              type="button"
-              onClick={connectWallet}
-              className="text-white w-full mt-2 border-[1px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer"
-              >
-                <p className="text-base font-semibold text-white">
-                    Conectar Billetera
-                </p>
-            </button>
+            <button type="button" onClick={connectWallet} className="text-white w-full mt-2 border-[2px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer">
+              <p className="text-base font-semibold text-white">
+                    Conectar Billetera </p> </button>
             )}
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
@@ -70,16 +62,10 @@ const Swap = () => {
             {isLoading
               ? <Loader />
               : (
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  className="text-white w-full mt-2 border-[1px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer"
-                >
-                  Swap
-                </button>
+                <button type="button" onClick={handleSubmit} className="text-white w-full mt-2 border-[2px] p-2 border-[#ee8a27] hover:bg-[#ee8a27] rounded-full cursor-pointer">
+                  Swap </button>
               )}
         </div>
-       
 
             </div>
             </div>

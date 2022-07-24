@@ -387,6 +387,76 @@ body {
   box-shadow: 0 0 15px black;
 }
 
+.container-g {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  gap: 50px;
+}
+
+.container-g .card {
+  width: 250px;
+  height: 170px;
+  overflow: hidden;
+  margin: 0 -85px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.container-g .card:nth-child(1) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container-g .card:nth-child(3) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container-g .card:nth-child(5) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container-g .card img {
+  transition: 0.5s;
+}
+
+.container-g .card:hover img {
+  transform: scale(1.5);
+}
+
+.container-dk {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  gap: 50px;
+}
+
+.container-dk .card {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 -85px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.container-dk .card:nth-child(2) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container-dk .card:nth-child(4) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.container-dk .card img {
+  transition: 0.5s;
+}
+
+.container-dk .card:hover img {
+  transform: scale(1.5);
+}
+
 .text-gradient {
   background-color: #fff;
   background-image: radial-gradient(
